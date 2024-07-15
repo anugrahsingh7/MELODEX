@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Melodex - Web Player</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script> 
 </head>
 <body>
     <div class="container">
@@ -31,69 +32,48 @@
 
         <div class="songnav">
             <div class="songnavimg">
-                <a href="preview.html" class="preview-btn"><div><img class="preview-img"src="display.png" alt="icon"></div></a>
+                <a href="preview.html" class="preview-btn"><div><img class="preview-img" src="display.png" alt="icon"></div></a>
             </div>
             <div class="songnavinfo">
-             <div><p>song name</p></div>
-             <div><p>artists name</p></div>
+             <div ><p1 class="song-name">song name</p1></div>
+             <div><p2 class="artist-name">artists name</p2></div>
             </div>
         </div>
-
-
         <div class="vol">
             <p>volume</p>
         </div>
         </nav>
-       
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         <main>
-            <div class="heading-1">
+            <div class="heading-2">
                 <h1>Top Picks for You</h1>
             </div>
             
             <div class="main-scroll-div">
                 
                 <div class="">
-                    <button class="icon1" onclick="scrolll">
+                    <button class="icon1 left-slide">
                         <img src="left.png" alt="random">
                     </button>
                 </div>
                 <div class="cover">
                     <div class="scroll-images">
-                        <div class="child"><img class="child-img" src="songs/despacito.jpg" alt="randomimage"><div class="div-play"><img class="img-play"src="imgplay.png"alt="playicon"></div><div class="song-info"><p1>Despacito</p1><p2>Luis Fonsi , ft.Freddy Junkee</p2></div></div>
-                        <div class="child"><img class="child-img" src="songs/animal.jpg" alt="randomimage"><div class="div-play"><img class="img-play"src="imgplay.png"alt="playicon"></div><div class="song-info"><p1>Phele Bhi Main</p1><p2>Vishal Mishra & Raj Shekhar</p2></div></div>
-                        <div class="child"><img class="child-img" src="songs/desikalakaar.jpg" alt="randomimage"><div class="div-play"><img class="img-play"src="imgplay.png"alt="playicon"></div><div class="song-info"><p1>Desi Kalakaar</p1><p2>Yo Yo Honey Singh</p2></div></div>
-                        <div class="child"><img class="child-img" src="songs/fortuner.jpg" alt="randomimage"><div class="div-play"><img class="img-play"src="imgplay.png"alt="playicon"></div><div class="song-info"><p1>Yaar Haryane Te</p1><p2>KHASA ALA CHAHAR & KD DESIROCK</p2></div></div>
-                        <div class="child"><img class="child-img" src="songs/letmeloveyou.jpg" alt="randomimage"><div class="div-play"><img class="img-play"src="imgplay.png"alt="playicon"></div><div class="song-info"><p1>Let Me Love You</p1><p2>DJ Snake , ft.Justin Bieber</p2></div></div>
-                        <div class="child"><img class="child-img" src="songs/borntoshine.jpg" alt="randomimage"><div class="div-play"><img class="img-play"src="imgplay.png"alt="playicon"></div><div class="song-info"><p1>Born To Shine</p1><p2>Diljit Dosanjh</p2></div></div>
-                        <div class="child"><img class="child-img" src="songs/tumhiho.jpeg" alt="randomimage"><div class="div-play"><img class="img-play"src="imgplay.png"alt="playicon"></div><div class="song-info"><p1>Tum Hi Ho</p1><p2>Arijit Singh</p2></div></div>
-                        <div class="child"><img class="child-img" src="songs/samebeef.jpeg" alt="randomimage"><div class="div-play"><img class="img-play"src="imgplay.png"alt="playicon"></div><div class="song-info"><p1>Same Beef</p1><p2>Sidhu Moose Wala</p2></div></div>
+                        <div class="child" data-song="despacito" data-name="Louis Fonsi"><img class="child-img" src="songs/despacito.jpg" alt="randomimage"><div class="div-play"><img class="img-play"src="imgplay.png"alt="playicon"></div><div class="song-info"><p1>Despacito</p1><p2>Luis Fonsi , ft.Freddy Junkee</p2></div></div>
+                        <div class="child" data-song="phelebhimein" data-name="Vishal Mishra & Raj Shekhar"><img class="child-img" src="songs/animal.jpg" alt="randomimage"><div class="div-play"><img class="img-play"src="imgplay.png"alt="playicon"></div><div class="song-info"><p1>Phele Bhi Main</p1><p2>Vishal Mishra & Raj Shekhar</p2></div></div>
+                        <div class="child" data-song="desikalakaar" data-name="Honey Singh"><img class="child-img" src="songs/desikalakaar.jpg" alt="randomimage"><div class="div-play"><img class="img-play"src="imgplay.png"alt="playicon"></div><div class="song-info"><p1>Desi Kalakaar</p1><p2>Yo Yo Honey Singh</p2></div></div>
+                        <div class="child" data-song="yaarharyanete" data-name="KHASA ALA CHAHAR & KD DESIROCK"><img class="child-img" src="songs/fortuner.jpg" alt="randomimage"><div class="div-play"><img class="img-play"src="imgplay.png"alt="playicon"></div><div class="song-info"><p1>Yaar Haryane Te</p1><p2>KHASA ALA CHAHAR & KD DESIROCK</p2></div></div>
+                        <div class="child" data-song="letmeloveyou" data-name="DJ Snake ft. Justin Bieber"><img class="child-img" src="songs/letmeloveyou.jpg" alt="randomimage"><div class="div-play"><img class="img-play"src="imgplay.png"alt="playicon"></div><div class="song-info"><p1>Let Me Love You</p1><p2>DJ Snake , ft.Justin Bieber</p2></div></div>
+                        <div class="child" data-song="borntoshine" data-name="Dilijit Dosanjh"><img class="child-img" src="songs/borntoshine.jpg" alt="randomimage"><div class="div-play"><img class="img-play"src="imgplay.png"alt="playicon"></div><div class="song-info"><p1>Born To Shine</p1><p2>Diljit Dosanjh</p2></div></div>
+                        <div class="child" data-song="tumhiho" data-name="Arijit Singh"><img class="child-img" src="songs/tumhiho.jpeg" alt="randomimage"><div class="div-play"><img class="img-play"src="imgplay.png"alt="playicon"></div><div class="song-info"><p1>Tum Hi Ho</p1><p2>Arijit Singh</p2></div></div>
+                        <div class="child" data-song="samebeef" data-name="Sidhu Moose Wala"><img class="child-img" src="songs/samebeef.jpeg" alt="randomimage"><div class="div-play"><img class="img-play"src="imgplay.png"alt="playicon"></div><div class="song-info"><p1>Same Beef</p1><p2>Sidhu Moose Wala</p2></div></div>
 
                     </div>
                 </div>
                 <div class="">
-                    <button class="icon1" onclick="scrollr">
+                    <button class="icon1 right-slide">
                         <img src="right.png" alt="random">
                     </button>
                 </div>
             </div>
-            
-
-
-
-
-
             <div class="heading-1">
                 <h1>English</h1>
             </div>
@@ -101,34 +81,29 @@
             <div class="main-scroll-div">
                 
                 <div class="">
-                    <button class="icon1" onclick="scrolll">
+                    <button class="icon1 left-slide">
                         <img src="left.png" alt="random">
                     </button>
                 </div>
                 <div class="cover">
                     <div class="scroll-images">
-                        <div class="child"><img class="child-img" src="songs/peaches.jpg" alt="randomimage"><div class="div-play"><img class="img-play"src="imgplay.png"alt="playicon"></div><div class="song-info"><p1>Peaches</p1><p2>Justin Bieber</p2></div></div>
-                        <div class="child"><img class="child-img" src="songs/jalebi.jpg" alt="randomimage"><div class="div-play"><img class="img-play"src="imgplay.png"alt="playicon"></div><div class="song-info"><p1>Jalebi Baby</p1><p2>Tesher x Jason Derolo</p2></div></div>
-                        <div class="child"><img class="child-img" src="songs/happier.jpg" alt="randomimage"><div class="div-play"><img class="img-play"src="imgplay.png"alt="playicon"></div><div class="song-info"><p1>Happier Than Ever</p1><p2>Billie Eilish</p2></div></div>
-                        <div class="child"><img class="child-img" src="songs/shape.jpg" alt="randomimage"><div class="div-play"><img class="img-play"src="imgplay.png"alt="playicon"></div><div class="song-info"><p1>Shape of You</p1><p2>Ed Sheeran</p2></div></div>
-                        <div class="child"><img class="child-img" src="songs/onedirection.jpg" alt="randomimage"><div class="div-play"><img class="img-play"src="imgplay.png"alt="playicon"></div><div class="song-info"><p1>One Direction</p1><p2>One Direction</p2></div></div>
-                        <div class="child"><img class="child-img" src="songs/despacito.jpg" alt="randomimage"><div class="div-play"><img class="img-play"src="imgplay.png"alt="playicon"></div><div class="song-info"><p1>Despacito</p1><p2>Luis Fonsi , ft.Freddy Junkee</p2></div></div>
-                        <div class="child"><img class="child-img" src="songs/baby.jpg" alt="randomimage"><div class="div-play"><img class="img-play"src="imgplay.png"alt="playicon"></div><div class="song-info"><p1>Baby</p1><p2>Justin Bieber</p2></div></div>
-                        <div class="child"><img class="child-img" src="songs/letmeloveyou.jpg" alt="randomimage"><div class="div-play"><img class="img-play"src="imgplay.png"alt="playicon"></div><div class="song-info"><p1>Let Me Love You</p1><p2>DJ Snake , ft.Justin Bieber</p2></div></div>
+                        <div class="child" data-song="peaches" data-name="Justin Bieber"><img class="child-img" src="songs/peaches.jpg" alt="randomimage"><div class="div-play"><img class="img-play"src="imgplay.png"alt="playicon"></div><div class="song-info"><p1>Peaches</p1><p2>Justin Bieber</p2></div></div>
+                        <div class="child" data-song="jalebi" data-name="Tesher x Jason Derolo"><img class="child-img" src="songs/jalebi.jpg" alt="randomimage"><div class="div-play"><img class="img-play"src="imgplay.png"alt="playicon"></div><div class="song-info"><p1>Jalebi Baby</p1><p2>Tesher x Jason Derolo</p2></div></div>
+                        <div class="child" data-song="happier" data-name="Billie Eilish"><img class="child-img" src="songs/happier.jpg" alt="randomimage" ><div class="div-play"><img class="img-play"src="imgplay.png"alt="playicon"></div><div class="song-info"><p1>Happier Than Ever</p1><p2>Billie Eilish</p2></div></div>
+                        <div class="child" data-song="shape" data-name="Ed Sheeran"><img class="child-img" src="songs/shape.jpg" alt="randomimage"><div class="div-play"><img class="img-play"src="imgplay.png"alt="playicon"></div><div class="song-info"><p1>Shape of You</p1><p2>Ed Sheeran</p2></div></div>
+                        <div class="child" data-song="onedirection" data-name="One Direction"><img class="child-img" src="songs/onedirection.jpg" alt="randomimage"><div class="div-play"><img class="img-play"src="imgplay.png"alt="playicon"></div><div class="song-info"><p1>One Direction</p1><p2>One Direction</p2></div></div>
+                        <div class="child" data-song="despacito" data-name="Luis Fonsi , ft.Freddy Junkee"><img class="child-img" src="songs/despacito.jpg" alt="randomimage"><div class="div-play"><img class="img-play"src="imgplay.png"alt="playicon"></div><div class="song-info"><p1>Despacito</p1><p2>Luis Fonsi , ft.Freddy Junkee</p2></div></div>
+                        <div class="child" data-song="baby" data-name="Justin Bieber"><img class="child-img" src="songs/baby.jpg" alt="randomimage"><div class="div-play"><img class="img-play"src="imgplay.png"alt="playicon"></div><div class="song-info"><p1>Baby</p1><p2>Justin Bieber</p2></div></div>
+                        <div class="child" data-song="letmeloveyou" data-name="DJ Snake , ft.Justin Bieber"><img class="child-img" src="songs/letmeloveyou.jpg" alt="randomimage"><div class="div-play"><img class="img-play"src="imgplay.png"alt="playicon"></div><div class="song-info"><p1>Let Me Love You</p1><p2>DJ Snake , ft.Justin Bieber</p2></div></div>
 
                     </div>
                 </div>
                 <div class="">
-                    <button class="icon1" onclick="scrollr">
+                    <button class="icon1 right-slide">
                         <img src="right.png" alt="random">
                     </button>
                 </div>
             </div>
-
-
-
-
-
 
 
 
@@ -139,7 +114,7 @@
             <div class="main-scroll-div">
                 
                 <div class="">
-                    <button class="icon1" onclick="scrolll">
+                    <button class="icon1 left-slide">
                         <img src="left.png" alt="random">
                     </button>
                 </div>
@@ -157,7 +132,7 @@
                     </div>
                 </div>
                 <div class="">
-                    <button class="icon1" onclick="scrollr">
+                    <button class="icon1 right-slide">
                         <img src="right.png" alt="random">
                     </button>
                 </div>
@@ -171,7 +146,7 @@
             <div class="main-scroll-div">
                 
                 <div class="">
-                    <button class="icon1" onclick="scrolll">
+                    <button class="icon1 left-slide">
                         <img src="left.png" alt="random">
                     </button>
                 </div>
@@ -189,7 +164,7 @@
                     </div>
                 </div>
                 <div class="">
-                    <button class="icon1" onclick="scrollr">
+                    <button class="icon1 right-slide" onclick="scrollr">
                         <img src="right.png" alt="random">
                     </button>
                 </div>
@@ -204,7 +179,7 @@
             <div class="main-scroll-div">
                 
                 <div class="">
-                    <button class="icon1" onclick="scrolll">
+                    <button class="icon1 left-slide">
                         <img src="left.png" alt="random">
                     </button>
                 </div>
@@ -222,7 +197,7 @@
                     </div>
                 </div>
                 <div class="">
-                    <button class="icon1" onclick="scrollr">
+                    <button class="icon1 right-slide" onclick="scrollr">
                         <img src="right.png" alt="random">
                     </button>
                 </div>
@@ -278,6 +253,5 @@
        
        
       </div>
-     <script src="scripts.js"></script> 
 </body>
 </html>
